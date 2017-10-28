@@ -4,8 +4,7 @@ script:
   - zip -r om.w.zip ./*
 deploy:
   provider: releases
-  api_key:
-    secure: $tk
+  api_key: $tk
   file: ./om.w.zip
   skip_cleanup: true
   on:
