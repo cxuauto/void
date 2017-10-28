@@ -1,6 +1,6 @@
 language: python
 script:
-  - wget -mk "http://w.openmindclub.com" || echo "0"
+  - wget -m -k -p "http://w.openmindclub.com" || echo "0"
   - zip -r om.w.zip ./*
 deploy:
   provider: releases
