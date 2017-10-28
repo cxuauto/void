@@ -1,0 +1,10 @@
+language: python
+script:
+  - wget -mk "http://w.openmindclub.com"
+  - zip -r om.w.zip ./*
+deploy:
+  provider: releases
+  api_key:
+    secure: $tk
+  file: ./om.w.zip
+  skip_cleanup: true
