@@ -8,3 +8,5 @@ deploy:
     secure: $tk
   file: ./om.w.zip
   skip_cleanup: true
+  on:
+    branch: master
