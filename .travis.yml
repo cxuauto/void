@@ -1,11 +1,11 @@
 language: python
 script:
-  - wget -m -k -p "http://w.openmindclub.com" || echo "0"
-  - zip -r om.w.zip ./*
+  - wget -m -k -p "http://ielts-simon.com" || echo "0"
+  - zip -r ielts-simon.zip ./*
 deploy:
   provider: releases
   api_key: $tk
-  file: ./om.w.zip
+  file: ./ielts-simon.zip
   skip_cleanup: true
   on:
     branch: master
