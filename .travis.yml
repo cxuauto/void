@@ -1,11 +1,12 @@
 language: python
 script:
-  - wget -m -k -p "http://zqpythonic.qiniucdn.com/tree/" || echo "0"
-  - zip -r zq.pythonic.zip ./*
+  - export F="zq.scm"
+  - wget -m -k -p "http://zqscm.qiniucdn.com/tree/" || echo "0"
+  - zip -r $F.zip ./*
 deploy:
   provider: releases
   api_key: $tk
-  file: ./zq.pythonic.zip
+  file: ./$F.zip
   skip_cleanup: true
   on:
     branch: master
