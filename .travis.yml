@@ -1,7 +1,7 @@
 language: python
 script:
   - wget -m -k -p "http://zqpythonic.qiniucdn.com/tree/" || echo "0"
-  - zip -r yangzhiping.com.zip ./*
+  - zip -r zq.pythonic.zip ./*
 deploy:
   provider: releases
   api_key: $tk
