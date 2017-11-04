@@ -1,7 +1,7 @@
 language: python
 script:
   - export F="zq.coder"
-  - wget -m -k -p -D qiniucdn.com "http://zqcoder.qiniucdn.com/tree/" || echo "0"
+  - wget -m -k -p -l 9 -D qiniucdn.com "http://zqcoder.qiniucdn.com/tree/" || echo "0"
   - zip -r $F.zip ./*
 deploy:
   provider: releases
