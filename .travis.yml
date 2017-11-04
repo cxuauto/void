@@ -1,8 +1,13 @@
 language: python
+cache: 
+  directories:
+  - zq.coder
 script:
   - export F="zq.coder"
+  - mkdir $F && cd $F || cd $F
   - wget -m -k -p -l 9 -D qiniucdn.com "http://zqcoder.qiniucdn.com/tree/" || echo "0"
-  - zip -r $F.zip ./*
+  - zip -r ../$F.zip ./*
+  - cd ..
 deploy:
   provider: releases
   api_key: $tk
