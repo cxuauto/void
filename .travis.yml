@@ -1,11 +1,11 @@
 language: python
 script:
-  - wget -m -k -p "http://www.yangzhiping.com" || echo "0"
+  - wget -m -k -p "http://zqpythonic.qiniucdn.com/tree/" || echo "0"
   - zip -r yangzhiping.com.zip ./*
 deploy:
   provider: releases
   api_key: $tk
-  file: ./yangzhiping.com.zip
+  file: ./zq.pythonic.zip
   skip_cleanup: true
   on:
     branch: master
