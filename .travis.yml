@@ -5,7 +5,7 @@ cache:
 script:
   - export F="zq.coder"
   - mkdir $F && cd $F || cd $F
-  - wget -m -k -p -l 9 -D qiniucdn.com "http://zqcoder.qiniucdn.com/tree/" || echo "0"
+  - wget -m -k -p -l 3 -D qiniucdn.com "http://zqcoder.qiniucdn.com/tree/" || echo "0"
   - zip -r ../$F.zip ./*
   - cd ..
 deploy:
