@@ -6,7 +6,7 @@ script:
   - export TRAVIS_WORKER_HARD_TIMEOUT="100m"
   - export F="zq.skm"
   - mkdir $F && cd $F || cd $F
-  - wget -m -k -p -l 9 -D qiniucdn.com "http://skm.zoomquiet.top/tree/" || echo "0"
+  - wget -m -k -p -l 9 -D zoomquiet.top "http://skm.zoomquiet.top/tree/" || echo "0"
   - zip -r ../$F.zip ./*
   - cd ..
 deploy:
