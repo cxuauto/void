@@ -3,10 +3,11 @@ cache:
   directories:
   - zq.coder
 script:
-  - export TRAVIS_WORKER_HARD_TIMEOUT="100m"
-  - export F="zq.skm"
+  - #export TRAVIS_WORKER_HARD_TIMEOUT="100m"
+  - export F="oao.moe"
   - mkdir $F && cd $F || cd $F
-  - wget -m -k -p -l 9 -D zoomquiet.top "http://skm.zoomquiet.top/tree/" || echo "0"
+  - #wget -m -k -p -l 9 -D zoomquiet.top "http://skm.zoomquiet.top/tree/" || echo "0"
+  - wget --mirror --page-requisites --convert-links "https://oao.moe" || echo "0"
   - zip -r ../$F.zip ./*
   - cd ..
 deploy:
