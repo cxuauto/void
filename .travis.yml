@@ -1,4 +1,4 @@
-language: python
+language: perl
 cache: 
   directories:
   - zq.du101
