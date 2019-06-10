@@ -1,13 +1,13 @@
-language: perl
+language: python
 cache: 
   directories:
-  - zq.du101
+  - yangzhiping.com
 script:
   - #export TRAVIS_WORKER_HARD_TIMEOUT="100m"
-  - export F="zq.du101"
+  - export F="yangzhiping.com"
   - mkdir $F && cd $F || cd $F
   - #wget -m -k -p -l 9 -D zoomquiet.top "http://skm.zoomquiet.top/tree/" || echo "0"
-  - wget --mirror --page-requisites --convert-links "https://du.101.camp/" || echo "0"
+  - wget --mirror --page-requisites --convert-links "https://www.yangzhiping.com" || echo "0"
   - zip -r ../$F.zip ./*
   - cd ..
 deploy:
